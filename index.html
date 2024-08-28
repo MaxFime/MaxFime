@@ -1,58 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Добро пожаловать на сайт!</title>
     <style>
         body {
+            background-color: #1e1e1e;
+            color: #ffffff;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #000;
-            color: #fff;
             text-align: center;
+            padding-top: 50px;
         }
-        h1 {
-            font-size: 3rem;
-            background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
-            background-clip: text;
-            color: transparent;
-            animation: fadeIn 2s ease-in-out;
+        .rainbow-text {
+            font-size: 2.5em;
+            animation: rainbow 5s infinite;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        .subtitle {
+            font-size: 1.5em;
+            margin-top: 30px;
         }
-        p {
-            font-size: 1.25rem;
-            margin-top: 20px;
-            color: #ddd;
-            animation: fadeIn 2s ease-in-out;
+        .news-button {
+            margin-top: 50px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        footer {
-            background: #333;
-            color: #ccc;
-            padding: 20px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            animation: fadeInFooter 2s ease-in-out;
+        .news-button:hover {
+            background-color: #0056b3;
         }
-        @keyframes fadeInFooter {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @keyframes rainbow {
+            0% { color: red; }
+            15% { color: orange; }
+            30% { color: yellow; }
+            45% { color: green; }
+            60% { color: blue; }
+            75% { color: indigo; }
+            90% { color: violet; }
+            100% { color: red; }
         }
     </style>
 </head>
 <body>
-    <h1>Добро пожаловать на сайт!</h1>
-    <p>Здесь будут новости по созданию ОС. Следите за новостями на этом сайте!</p>
-    <footer>
-        <p>Данный сайт не крадет информацию и не устанавливает никакую информацию. Вся информация защищена и скрыта.</p>
-    </footer>
+    <h1 class="rainbow-text">Добро пожаловать на сайт!</h1>
+    <p class="subtitle">Здесь будут новости по созданию ОС. Следите за новостями на этом сайте!</p>
+    <button class="news-button" onclick="window.location.href='https://maxfimesystem.netlify.app/'">Новости</button>
+    <p style="margin-top: 50px;">Данный сайт не крадет информацию и не устанавливает никакую информацию. Вся информация защищена и скрыта.</p>
 </body>
 </html>

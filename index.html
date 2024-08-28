@@ -9,8 +9,10 @@
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
             font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            overflow: hidden;
         }
         .container {
             position: relative;
@@ -20,6 +22,8 @@
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+            max-width: 800px;
             animation: fadeIn 2s ease-out;
         }
         .rainbow-text {
@@ -86,28 +90,9 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        .water-animation {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            z-index: 0;
-            animation: wave 10s infinite linear;
-        }
-        @keyframes wave {
-            0% {
-                transform: translateX(-100%);
-            }
-            100% {
-                transform: translateX(100%);
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="water-animation"></div>
     <div class="container">
         <h1 class="rainbow-text">Добро пожаловать на сайт!</h1>
         <p class="subtitle">Здесь будут новости по созданию ОС. Следите за новостями на этом сайте!</p>
